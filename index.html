@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WKP8</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<header><h2>Hit Parade</h2></header>
+			<section class="filters-container">
+				<form class="filter-songs">
+					<fieldset>
+						<label for="filter-title">Song title:</label>
+						<input type="text" id="filter-title" placeholder="Filter by title" />
+					</fieldset>
+					<fieldset>
+						<label for="filter-style">Song style:</label>
+						<select id="filter-style">
+							<option value="">Pick a style</option>
+							<option value="dance">Dance</option>
+							<option value="folk">Folk</option>
+							<option value="rap">Rap</option>
+							<option value="Rock">Rock</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<button type="button" class="reset-filters">Reset filters</button>
+					</fieldset>
+				</form>
+			</section>
+			<section class="container song-form-container">
+				<h4>Add a song</h4>
+				<form class="add-songs">
+					<fieldset>
+						<label for="title">Song title</label>
+						<input
+							type="text"
+							required
+							name="title"
+							id="title"
+							placeholder="Enter song's title"
+						/>
+					</fieldset>
+					<fieldset>
+						<label for="artist">Song artist</label>
+						<input
+							type="text"
+							name="artist"
+							required
+							id="artist"
+							placeholder="Enter song's artist"
+						/>
+					</fieldset>
+					<fieldset>
+						<label for="artist">Song style</label>
+						<select name="style" id="style">
+							<option value="">Pick a style</option>
+							<option value="dance">Dance</option>
+							<option value="folk">Folk</option>
+							<option value="rap">Rap</option>
+							<option value="Rock">Rock</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label for="length">Song length</label>
+						<input
+							type="text"
+							required
+							name="length"
+							id="length"
+							placeholder="Enter song's length"
+						/>
+					</fieldset>
+					<fieldset>
+						<label for="length">Artist picture</label>
+						<input
+							type="text"
+							name="picture"
+							id="picture"
+							required
+							value="./assets/artist.jpeg"
+							placeholder="Enter artist's picture"
+						/>
+					</fieldset>
+					<fieldset>
+						<button type="submit">Add</button>
+					</fieldset>
+				</form>
+			</section>
+			<section class="container song-list-container">
+				<!-- <article class="song">
+					<section>
+						<img src="./assets/artist.jpeg" alt="artist-picture" />
+					</section>
+					<section>
+						<h5>Song's name</h5>
+						<p>Music style</p>
+					</section>
+					<section>
+						<h5>Artist name</h5>
+						<p>Song length</p>
+					</section>
+					<section>
+						SCORE: 10
+					</section>
+					<section>
+						<button>+1</button>
+						<button>
+							<img src="./assets/icons/trash.svg" alt="Delete Song" />
+						</button>
+					</section>
+				</article> -->
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

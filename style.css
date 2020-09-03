@@ -1,0 +1,171 @@
+:root {
+	--blue: #0083c3;
+	--grey-bg: #e5e5e5;
+	--grey-writing: #747474;
+	--grey-light: #f3f3f3;
+	--black: #2e2e2e;
+	--radius: 10px;
+	--shadow: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('./assets/font/Inter-Medium-slnt=0.ttf') format('ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--grey-bg);
+	font-family: 10px;
+	color: var(--black);
+}
+
+/* HEADINGS */
+
+h1 {
+	font-weight: bold;
+	font-size: 45px;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	color: var(--black);
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 30px;
+	color: var(--black);
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 5px;
+	color: var(--black);
+}
+
+main {
+	padding: 4rem 2rem;
+	margin: 0 auto;
+	max-width: 1200px;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 20% 1fr;
+	grid-template-rows: auto 1fr;
+	height: 100vh;
+}
+
+header {
+	align-self: end;
+}
+
+section.container {
+	background: white;
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section.filters-container {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 10px;
+	align-items: end;
+}
+
+.reset-filters {
+	background: none;
+	color: var(--blue);
+	border: 2px solid var(--blue);
+	font-weight: 600;
+	transition: all 0.1s;
+}
+
+.reset-filters:hover {
+	background: var(--blue);
+	color: white;
+}
+
+section.song-form-container {
+	align-self: start;
+}
+
+section.song-list-container {
+	display: grid;
+}
+
+/* FORM  */
+
+.filter-songs {
+	display: grid;
+	grid-template-columns: 20% 20% auto;
+	align-items: end;
+	gap: 10px;
+}
+
+.add-songs {
+	display: grid;
+	gap: 10px;
+}
+
+input {
+	border: none;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+	background-color: var(--grey-light);
+	padding: 0.6rem 1rem;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 0.3rem;
+	font-size: 14px;
+}
+
+select {
+	border: none;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+	background-color: var(--grey-light);
+	height: 2.25rem;
+	width: 100%;
+	border-radius: 5px;
+	color: var(--grey-writing);
+	margin-top: 0.3rem;
+	font-size: 14px;
+}
+
+label {
+	font-size: 11px;
+	line-height: 15px;
+	color: var(--black);
+}
+
+fieldset button {
+	border: none;
+	border-radius: 5px;
+	background-color: var(--blue);
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 0.6rem 2rem;
+	cursor: pointer;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+fieldset button:hover {
+	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* SONG LIST */
+
+.song {
+	display: grid;
+	grid-auto-flow: column;
+	justify-items: center;
+}
+
+.song img {
+	width: 100px;
+	height: 100px;
+}
